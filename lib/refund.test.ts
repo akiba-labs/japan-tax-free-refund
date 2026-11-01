@@ -161,3 +161,13 @@ test("rejects bad input", () => {
   assert.throws(() => checkRefund([{ store: "A", purchaseDate: "2026-13-01", amount: 1000, rate: 10 }]), RuleInputError);
   assert.throws(() => checkRefund([{ store: "A", purchaseDate: "2026-11-01", amount: 1000, rate: 10 }], "not-a-date"), RuleInputError);
 });
+
+test("eligibility note reflects the 2026-11-01 proof documents for Japanese nationals abroad (no 本籍 needed)", () => {
+  const r = checkRefund([{ store: "A", purchaseDate: "2026-11-01", amount: 11000, rate: 10 }], "2026-11-05");
+  const note = r.notes.find((n) => n.startsWith("Eligible purchasers"));
+  assert.ok(note);
+  assert.match(note!, /在留証明/);
+  assert.match(note!, /My Number Card/);
+  assert.match(note!, /no longer required/);
+  assert.equal(r.rulesAsOf, "2026-10-09");
+});

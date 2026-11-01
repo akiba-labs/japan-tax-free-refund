@@ -60,7 +60,7 @@ const faq: FaqItem[] = [
   },
   {
     q: "Who can shop tax-free in Japan?",
-    a: "Mainly foreign visitors who have been in Japan for less than six months since entry (and Japanese nationals living abroad for two or more years, with proof such as a residency certificate or My Number Card showing overseas move). Gold and platinum bullion and coins, and items already exempt from consumption tax, are not eligible.",
+    a: "Mainly foreign visitors who have been in Japan for less than six months since entry (and Japanese nationals who have lived abroad for two or more years: show your passport with the return (帰国) stamp plus a residence certificate (在留証明, e-certificate OK) or a copy of the 戸籍の附票 issued on or after the day 6 months before your last entry, or a My Number Card that records your move abroad; from 2026-11-01 these documents no longer need to show your 本籍 / registered domicile). Gold and platinum bullion and coins, and items already exempt from consumption tax, are not eligible.",
   },
   {
     q: "Is there a free Japan tax-free refund calculator with an API for AI agents?",

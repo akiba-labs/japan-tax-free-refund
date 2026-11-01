@@ -284,7 +284,7 @@ export function checkRefund(receipts: Receipt[], departureDate?: string | null):
   if (anyHighValue) notes.push("A receipt line is ¥1,000,000+ before tax; customs may ask for a certificate of authenticity or warranty for items that expensive.");
   if (excluded.length) notes.push("Some lines were excluded (bullion/coins or tax-exempt items) and do not count toward the ¥5,000 minimum.");
   notes.push("Tax is estimated per line as floor(amount × rate / (100 + rate)). Shops may round per item; the figure on your receipt or refund record wins.");
-  notes.push("Eligible purchasers are mainly foreign visitors in Japan for less than six months since entry (and Japanese nationals living abroad 2+ years, with proof).");
+  notes.push("Eligible purchasers are mainly foreign visitors in Japan for less than six months since entry (and Japanese nationals living abroad 2+ years, with a 在留証明 residence certificate, 戸籍の附票 copy or a My Number Card showing the move abroad; from 2026-11-01 the 本籍 / registered domicile is no longer required on these documents).");
 
   return {
     rulesAsOf: RULES_AS_OF,

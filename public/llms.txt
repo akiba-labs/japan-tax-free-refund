@@ -56,6 +56,7 @@ GET https://japan-tax-free-refund.vercel.app/api/rules
 - From 2026-11-01: refund method. Pay tax-inclusive; claim after customs confirms export.
 - Tax inside price: floor(amount * rate / (100 + rate)), whole yen. Rates 10% standard / 8% reduced.
 - Eligibility: ≥ ¥5,000 tax-exclusive per store per day.
+- Who can buy tax-free: foreign visitors in Japan less than 6 months since entry; Japanese nationals living abroad 2+ years with a 在留証明 (residence certificate) or 戸籍の附票 copy issued no earlier than 6 months before their last entry into Japan, or a My Number Card showing the move abroad. From 2026-11-01 these documents no longer need the 本籍 (registered domicile).
 - Deadline: purchase date + 90 days (NTA: counted from the day after purchase; bought 2026-11-01 → by 2027-01-30).
 - Claim before bag check at final departure airport/seaport. Operators may deduct a fee.
 
