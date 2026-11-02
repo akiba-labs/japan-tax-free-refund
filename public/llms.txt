@@ -85,3 +85,6 @@ Educational estimate, not tax advice. Rules can change; check official JNTO / JT
 - Hotel OTA Calculator: https://hotel-ota-calculator.vercel.app
 - Pitch Roast: https://pitch-roast.vercel.app
 - Free Agent Tools MCP: https://free-agent-tools.vercel.app
+
+## For shops
+- [Free tourist notice for the refund method (EN/JP/ZH copy-paste HTML)](https://japan-tax-free-refund.vercel.app/for-shops): free notice for tax-free shops explaining the 2026-11-01 refund method, generated from the same rules table as /api/rules.

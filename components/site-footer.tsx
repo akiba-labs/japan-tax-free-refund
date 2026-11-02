@@ -3,6 +3,7 @@ import { DISCLAIMER_SHORT, HONESTY, SIBLING_TOOLS } from "@/lib/site";
 
 const links = [
   { href: "/", label: "Checker" },
+  { href: "/for-shops", label: "For shops (free notice)" },
   { href: "/api/rules", label: "Rules JSON" },
   { href: "/openapi.json", label: "OpenAPI" },
   { href: "/llms.txt", label: "llms.txt" },
