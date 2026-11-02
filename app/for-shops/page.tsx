@@ -50,8 +50,8 @@ export default function ForShops() {
         when the rules change.
       </p>
       <div className="mt-3 flex flex-wrap gap-3 text-sm">
-        <a className="rounded border border-line px-3 py-2 hover:text-foreground" href="/for-shops/yes/shopify">Yes, as a Shopify app</a>
-        <a className="rounded border border-line px-3 py-2 hover:text-foreground" href="/for-shops/yes/wordpress">Yes, as a WordPress plugin</a>
+        <Link prefetch={false} className="rounded border border-line px-3 py-2 hover:text-foreground" href="/for-shops/yes/shopify">Yes, as a Shopify app</Link>
+        <Link prefetch={false} className="rounded border border-line px-3 py-2 hover:text-foreground" href="/for-shops/yes/wordpress">Yes, as a WordPress plugin</Link>
       </div>
 
       <section className="mt-10 text-sm leading-relaxed text-muted">
