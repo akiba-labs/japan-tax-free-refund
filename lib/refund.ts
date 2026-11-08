@@ -53,7 +53,7 @@ export const CHECKLIST = [
   "Each store's purchases are added up per day: you need ¥5,000+ before tax at one store on one day.",
   "Register your refund method (card, app, etc.) at the shop when you buy; ask how and when they pay.",
   "Depart Japan within 90 days of the purchase date (counted from the day after purchase).",
-  "Do the tax-free kiosk (or Visit Japan Web at Narita, Haneda, Kansai, Chubu, New Chitose, Fukuoka, Naha) at your FINAL departure airport or seaport, BEFORE checking bags. Checked bags cannot be retrieved for this.",
+  "Do the tax-free kiosk (or Visit Japan Web at Narita, Haneda, Kansai, Chubu, New Chitose, Fukuoka, Naha; Visit Japan Web only for Temporary Visitor, Diplomat or Official status, never Japanese nationals) at your FINAL departure airport or seaport, BEFORE checking bags. Checked bags cannot be retrieved for this.",
   "Carry every item from each receipt. If one item from a receipt is missing, nothing on that receipt is refunded.",
   "Take all tax-free goods, general goods and consumables alike, out of Japan unused. Food, drinks, and cosmetics used in Japan are not refundable; if you used some, skip the kiosk and tell the customs counter.",
   "Green result: done. Red result: take the goods to the customs inspection area before boarding. Leave plenty of time; missing your flight is not compensated.",
@@ -319,7 +319,7 @@ export const RULES = {
       regime: "refund",
       appliesTo: "Purchases on or after 2026-11-01",
       howItWorks:
-        "Pay the tax-inclusive price at a tax-free shop and register a refund method. On departure, scan your passport at a tax-free kiosk (or Visit Japan Web at major airports) BEFORE checking bags. Green = done; Red = customs inspection. After customs confirms, the shop or its refund operator pays back the consumption tax.",
+        "Pay the tax-inclusive price at a tax-free shop and register a refund method. On departure, scan your passport at a tax-free kiosk (or Visit Japan Web at major airports, Temporary Visitor / Diplomat / Official status only) BEFORE checking bags. Green = done; Red = customs inspection. After customs confirms, the shop or its refund operator pays back the consumption tax.",
       minimumPerStorePerDay: "¥5,000 before tax (same purchaser, same store, same day)",
       categories: "No general/consumable split, no ¥500,000 cap, no sealed bags. Quantities limited to what you can carry out yourself. Consumables used in Japan are not refundable.",
       atDeparture: "Final departure airport/seaport, international departure lobby, before baggage check-in.",
