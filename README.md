@@ -88,4 +88,4 @@ npm test
 npm run dev
 ```
 
-MIT License. Built for Sean Ryan (`sean0007`).
+MIT License. Built for Sean Ryan (`akiba-labs`).
