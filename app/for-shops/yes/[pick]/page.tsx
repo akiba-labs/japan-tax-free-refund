@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { withBasePath } from "@/lib/hosting";
 
 export const metadata: Metadata = { title: "Thanks: tap counted", robots: { index: false, follow: false } };
 
@@ -22,7 +23,7 @@ export default async function Yes({ params }: { params: Promise<{ pick: string }
         Your tap for {name} is counted. Nothing is for sale and we didn&apos;t store anything about you. The free copy-paste
         notice stays available either way.
       </p>
-      <p className="mt-4 text-sm"><a href="/for-shops" className="underline">Back to the shop notice</a></p>
+      <p className="mt-4 text-sm"><a href={withBasePath("/for-shops")} className="underline">Back to the shop notice</a></p>
     </div>
   );
 }

@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { CardDisclaimer } from "@/components/card-disclaimer";
 import { ShareBar } from "@/components/share-bar";
+import { isGithubPages, pagesSiteUrl } from "@/lib/hosting";
 import { checkRefund, type Rate, type Receipt } from "@/lib/refund";
 import { PUBLIC_URL, resultPath, yen, type Shared } from "@/lib/share";
 
@@ -51,7 +52,7 @@ export function Checker({ initial }: { initial?: Shared }) {
       return null;
     }
   }, [receipts, departureDate]);
-  const shareUrl = `${PUBLIC_URL}${resultPath(shared)}`;
+  const shareUrl = isGithubPages ? `${pagesSiteUrl(PUBLIC_URL)}/` : `${PUBLIC_URL}${resultPath(shared)}`;
 
   const setRow = (i: number, patch: Partial<Row>) => setRows((rs) => rs.map((r, j) => (j === i ? { ...r, ...patch } : r)));
 
@@ -208,12 +209,18 @@ export function Checker({ initial }: { initial?: Shared }) {
                 </ul>
               </div>
               <div className="mt-6 border-t border-line pt-4" data-testid="share-result">
-                <p className="text-xs text-muted">Share this result. The link carries your receipts; nothing is stored.</p>
+                <p className="text-xs text-muted">
+                  {isGithubPages
+                    ? "Share the checker. A link to this exact result returns when hosting is back."
+                    : "Share this result. The link carries your receipts; nothing is stored."}
+                </p>
                 <div className="mt-3 flex flex-wrap items-center gap-2">
                   <ShareBar url={shareUrl} text={`Japan tax-free shopping: about ${yen(result.maxRefundJPY)} max refund after Nov 2026. Free checker:`} />
-                  <a href={resultPath(shared)} className="text-sm text-muted underline underline-offset-2 hover:text-foreground">
-                    Open result page
-                  </a>
+                  {isGithubPages ? null : (
+                    <a href={resultPath(shared)} className="text-sm text-muted underline underline-offset-2 hover:text-foreground">
+                      Open result page
+                    </a>
+                  )}
                 </div>
               </div>
             </>

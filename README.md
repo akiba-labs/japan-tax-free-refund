@@ -2,7 +2,8 @@
 
 Free checker for Japan's tax-free shopping change on **2026-11-01**: visitors pay the tax-inclusive price, then claim consumption tax back at customs **before bag check** within **90 days** of purchase.
 
-- Live: https://japan-tax-free-refund.vercel.app
+- Full app and API (Vercel): https://japan-tax-free-refund.vercel.app
+- Checker (GitHub Pages): https://akiba-labs.github.io/japan-tax-free-refund/
 - API: `GET /api/refund`, `POST /api/refund`, `GET /api/rules`
 - Agent docs: `/llms.txt`, `/openapi.json`, `/.well-known/ai-plugin.json`
 - MCP tool: `japan_tax_free_refund_check` on https://free-agent-tools.vercel.app/mcp
@@ -85,7 +86,13 @@ Shareable result: `/r?d=2026-11-20&r=Bic%20Camera%20Shinjuku~2026-11-12~16500~10
 ```bash
 npm ci
 npm test
+npm run build
+npm run build:pages
 npm run dev
 ```
+
+`npm run build` is the Vercel app (checker, JSON API, share pages). `npm run build:pages` writes a static `out/` for GitHub Pages and checks that internal links and assets resolve under `/japan-tax-free-refund`. Server routes stay in the repo; the Pages script only moves them aside for that build.
+
+GitHub settings: **Settings → Pages → Build and deployment → Source: GitHub Actions**. Pushes to `main` deploy with `.github/workflows/pages.yml`. Pull requests build the static export and do not deploy. The copy-paste steps for the other tool repos are at the top of `scripts/build-pages.mjs`.
 
 MIT License. Built for Sean Ryan (`akiba-labs`).
