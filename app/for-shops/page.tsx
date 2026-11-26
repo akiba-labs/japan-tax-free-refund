@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { API_PAUSED_NOTE, isGithubPages } from "@/lib/hosting";
 import { NOTICE, NOTICE_RULES_AS_OF, noticeHtml } from "@/lib/shop-notice";
 import { SOURCES } from "@/lib/refund";
 
@@ -57,7 +58,15 @@ export default function ForShops() {
       <section className="mt-10 text-sm leading-relaxed text-muted">
         <h2 className="text-base font-semibold text-foreground">Rules and sources</h2>
         <p className="mt-2">
-          Rules as of {NOTICE_RULES_AS_OF}, the same table the <Link href="/">checker</Link> and <a href="/api/rules">/api/rules</a> use.
+          Rules as of {NOTICE_RULES_AS_OF}, the same table the <Link href="/">checker</Link>
+          {isGithubPages ? (
+            <> uses. {API_PAUSED_NOTE}</>
+          ) : (
+            <>
+              {" "}
+              and <a href="/api/rules">/api/rules</a> use.
+            </>
+          )}{" "}
           Educational notice, not tax advice; the shop, its refund operator, and Japan Customs decide. Check official guidance:
         </p>
         <ul className="mt-2 list-disc space-y-1 pl-5">
